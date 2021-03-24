@@ -1,0 +1,52 @@
+<table width = "100%" border = "3px" cellspacing = "20px">
+                <tr>
+                <td><h3>Информация о залоге</h3></td>
+                <td><h3>Создание залога</h3></td>
+                <td><h3>Подтверждение ( получатель ) </h3></td>
+                <td><h3>Подтверждение ( владелец ) </h3></td>
+                <td><h3>Отменить залог ( владелец )</h3></td>
+                <td><h3>Отменить залог ( получатель )</h3></td>
+                </tr>
+
+                <tr>
+                <td width = "27%">
+                    <input placeholder="ID залога" value={get_deposit_id_deposit} onChange={(e)=>setGet_deposit_id_deposit(e.target.value)}/><br/>
+                    <button onClick = {()=> get.get_deposit(get_deposit_id_deposit).then(deposit=>setDeposit(deposit))}>Информация о залоге</button>
+                    <ul>
+                        <li>ID дома: {deposit.id_home}</li>
+                        <li>Владелец: {deposit.owner}</li>
+                        <li>Рентер: {deposit.renter}</li>
+                        <li>Цена: {deposit.count}</li>
+                        <li>Срок залога: {deposit.time}</li>
+                    </ul> 
+                </td> 
+
+                <td>
+                <input placeholder="ID дома" value={create_deposit_id_home} onChange={(e)=>setCreate_deposit_id_home(e.target.value)}/><br/>
+                <input placeholder="Стоимость аренды" value={create_deposit_count} onChange={(e)=>setCreate_deposit_count(e.target.value)}/><br/>
+                <input placeholder="Срок аренды" value={create_deposit_time} onChange={(e)=>setCreate_deposit_time(e.target.value)}/><br/>
+                <button onClick = {()=> get.create_deposit(create_deposit_id_home, create_deposit_count, create_deposit_time)}>Создать залог</button>
+                </td>
+
+                <td>
+                <input placeholder="ID аренды" value={deposit_renter_id_deposit} onChange={(e)=>setDeposit_renter_id_deposit(e.target.value)}/><br/>
+                <input placeholder="Перевести:" value={deposit_renter_count} onChange={(e)=>setDeposit_renter_count(e.target.value)}/><br/>
+                <button onClick = {()=> get.deposit_renter(deposit_renter_id_deposit, deposit_renter_count)}>Подтвердить</button>
+                </td>
+
+                <td>
+                <input placeholder="ID аренды" value={deposit_owner_id_deposit} onChange={(e)=>setDeposit_owner_id_deposit(e.target.value)}/><br/>
+                <button onClick = {()=> get.deposit_owner(deposit_owner_id_deposit)}>Подтвердить</button>
+                </td>
+
+                <td>
+                    <input placeholder="ID аренды" value={deposit_cancel_owner} onChange={(e)=>setDeposit_cancel_owner(e.target.value)}/><br/>
+                    <button onClick = {()=> get.deposit_cancel_owner(deposit_cancel_owner)}>Отменить</button>
+                </td>
+
+                <td>
+                    <input placeholder="ID аренды" value={deposit_cancel_renter} onChange={(e)=>setDeposit_cancel_renter(e.target.value)}/><br/>
+                    <button onClick = {()=> get.deposit_cancel_renter(deposit_cancel_renter)}>Отменить</button>
+                </td>
+                </tr> 
+            </table>

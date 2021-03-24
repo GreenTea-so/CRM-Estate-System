@@ -1,0 +1,101 @@
+li {
+    list-style-type: none; /* Убираем маркеры */
+   }
+   ul {
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+   }
+
+.input-get{
+    height: 10px;
+    width: 150px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: .05em;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 12px 12px;
+    font-family: 'Montserrat', sans-serif;
+    color: #904C6E;
+    background: white;
+    border: 1px solid;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+.button-get {
+    width: 250px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(64,199,129);
+    box-shadow: 0 -3px rgb(53,167,110) inset;
+    transition: 0.2s;
+  } 
+  .button-get:hover { background: rgb(53, 167, 110); }
+  .button-get:active {
+    background: rgb(33,147,90);
+    box-shadow: 0 3px rgb(33,147,90) inset;
+  }
+
+  .grid-estate{
+    margin: 0 auto;
+    display: grid;
+    grid-area: up;
+    width: 600px;
+    
+   
+    background-color: none;
+
+  }
+
+  input{
+    
+        height: 10px;
+        width: 150px;
+        display: inline-flex;
+        align-items: center;
+        font-size: 12px;
+        letter-spacing: .05em;
+        font-weight: 600;
+        text-transform: none;
+        padding: 12px 12px;
+        font-family: 'Montserrat', sans-serif;
+        color: #904C6E;
+        background: white;
+        border: 1px solid;
+        cursor: pointer;
+        transition: .3s linear;
+    
+  }
+
+  .button-send {
+    
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: .5em 2em;
+    outline: none;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #FDBE33 #000 #D77206;
+    border-radius: 6px;
+    background: linear-gradient(#F3AE0F, #E38916) #E38916;
+    transition: 0.2s;
+  } 
+  .button-send:hover { background: linear-gradient(#f5ae00, #f59500) #f5ae00; }
+  .button-send:active { background: linear-gradient(#f59500, #f5ae00) #f59500; }
+
+  .button-value {
+    color: #fff; /* цвет текста */
+    text-decoration: none; /* убирать подчёркивание у ссылок */
+    user-select: none; /* убирать выделение текста */
+    background: rgb(212,75,56); /* фон кнопки */
+    padding: .7em 1.5em; /* отступ от текста */
+    outline: none; /* убирать контур в Mozilla */
+  } 
+  .button-value:hover { background: rgb(232,95,76); } /* при наведении курсора мышки */
+  .button-value:active { background: rgb(152,15,0); } /* при нажатии */
